@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+}
+
+.image {
+    width: 50%;
+    height: 40vw;
+    margin: 1vw 3vw 0 3vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* title styles */
+
+.img1 {
+    width: 50vw;
+    height: 30vw;
+    background-image: url('../../../imgs/AIInSpace/CIMON_x2.jpg');
+    margin: 2.5vw 0 1vw 0;
+    background-size: cover;
+}
+
+svg {
+    width: 50vw;
+    height: 30vw;
+}
+
+.img2 {
+    width: 100%;
+    height: 30vw;
+    background-image: url('../../../imgs/AIInSpace/elab.gif');
+    margin: 2.5% 0 1% 0;
+    background-size: cover;
+}
+
+.img3 {
+    width: 50vw;
+    height: 30vw;
+    background-image: url('../../../imgs/AIInSpace/sat.gif');
+    margin: 2.5vw 0 0 0;
+    background-size: cover;
+}
+
+@media screen and (max-width: 800px) {
+    .img1 {
+        width: 100%;
+        height: 30vw;
+    }
+    .img2 {
+        width: 100%;
+        height: 30vw;
+    }
+    .img3 {
+        width: 100%;
+        height: 30vw;
+    }
+}

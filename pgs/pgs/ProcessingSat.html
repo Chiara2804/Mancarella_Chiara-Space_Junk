@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Satellites</title>
+
+    <!--GOOGLE FONT API-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+
+    <!--STYLE-->
+    <link rel="stylesheet" href="../style/general/style-scrollbars.css">
+    <link rel="stylesheet" href="../style/general/style-text.css">
+    <link rel="stylesheet" href="../style/general/style-header.css">
+    <link rel="stylesheet" href="../style/AIInSpace/style-map.css">
+    <link rel="stylesheet" href="../style/general/style-contextMenu.css">
+
+    <!--TAB ICON-->
+    <link rel="icon" href="../../imgs/General/icons8-earth-64.png">
+
+    <title>Processing of satellite images</title>
+</head>
+
+<body>
+
+    <!--custom context menu-->
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li id="back" onclick="history.back()">Indietro</li>
+            <li id="reload" onclick="reload()">Ricarica</li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <!--button to go to the main page-->
+        <div id="top" class="buttonBack">
+            <a href="AIInSpace.html"><img class="arrow" src="../../imgs/General/icons8-freccia-lunga-a-sinistra-50.png" /></a>
+        </div>
+
+        <!--form to send me an e-mail-->
+        <img id="login" class="astro" onclick="open_or_close_form()" src="../../imgs/General/icons8-astronaut-helmet-60.png" title="Click to share with me your opinion">
+
+        <div class="login-box" id="form">
+            <h2>Feedback</h2><br>
+            <form action="https://formspree.io/f/xqkndgrk" method="POST" id="f">
+                <div class="user-box">
+                    <input type="email" name="email" required>
+                    <label>E-mail</label>
+                </div>
+                <div class="user-box">
+                    <label>Message</label><br><br>
+                    <textarea name="message" required></textarea>
+                </div>
+                <button class="a" type="submit">SUBMIT</button>
+            </form>
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <div id="box-flex-AI">
+        <div class="image">
+            <div class="title" data-text="Processing of satellite images">
+                Processing of satellite images
+            </div>
+            <div class="img2"></div>
+        </div>
+
+        <div id="paragraph" class="paragraph reveal-text">The amount of data collected by satellites orbiting the Earth is enormous.<br>Artificial Intelligence technologies are already being used to detect things like black holes and radio galaxies. The tools of artificial intelligence are used to analyze
+            data taken by the Gaia Space Telescope to discover new stars that could better explain the origin of our galaxy. Before the techniques of Artificial Intelligence and learning automatically were used to study the data, scientists were able
+            to identify about 100 stars. However, thanks to new AI technology, this number has increased to 2,000.
+            <br> Space telescopes also produce many images of the Earth, useful for obtaining information on weather conditions, creating up - to - date online maps and many other data. Satellite images of our planet have an infinite number of possibilities
+            for the use of Artificial Intelligence. <br> Without artificial intelligence algorithms, people would have to process the data themselves, which would make the information less accurate. The power of Machine Learning algorithms lies in their
+            ability to study millions of images in a few moments, recording on the fly any changes, for example, in the movement of atmospheric fronts. Also, unlike humans, AI does not require rest and is not error prone associated with loss of concentration
+            and attention. This is especially important when monitoring natural disasters. By automating various processes with the help of artificial intelligence, the satellite will start autonomously to take pictures if the sensors register certain
+            signals, such as critical differences in pressure or temperature of the air flows. Furthermore, such satellites can be part of disaster warning systems: thanks to intelligence algorithms artificial, they can calculate the probability of a
+            phenomenon.
+        </div>
+    </div>
+
+
+    <!--SCRIPT-->
+    <script src="../script/General/script-login.js"></script>
+    <script src="../script/General/script-contextMenu.js"></script>
+    <script src="../script/General/script-sendEmail.js"></script>
+</body>
+
+</html>

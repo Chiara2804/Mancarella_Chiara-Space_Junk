@@ -1,0 +1,105 @@
+@keyframes orbit1 {
+    from {
+        transform: translateZ(1px) rotate3d(2, 1, 0, 0deg) rotate(0deg);
+    }
+    to {
+        transform: translateZ(1px) rotate3d(2, 1, 0, -360deg) rotate(720deg);
+    }
+}
+
+@keyframes orbit2 {
+    from {
+        transform: translateZ(1px) rotate3d(-2, 1, 0, 0deg) rotate(0deg);
+    }
+    to {
+        transform: translateZ(1px) rotate3d(-2, 1, 0, 360deg) rotate(720deg);
+    }
+}
+
+@keyframes orbit3 {
+    from {
+        transform: translateZ(1px) rotate3d(0, 1, 0, 0deg) rotate(0deg);
+    }
+    to {
+        transform: translateZ(1px) rotate3d(0, 1, 0, 360deg) rotate(720deg);
+    }
+}
+
+@keyframes orbit4 {
+    from {
+        transform: rotate3d(1, 1, 0, 0deg);
+    }
+    to {
+        transform: rotate3d(1, 4, 0, 180deg);
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #000;
+}
+
+.sphere,
+.orbit {
+    border-radius: 50%;
+}
+
+.sphere {
+    width: 8vw;
+    height: 8vw;
+    background-image: linear-gradient(45deg, rgb(0, 47, 255) 20%, rgb(13, 207, 255));
+    transform: translateZ(1px);
+    position: relative;
+}
+
+.orbit {
+    position: absolute;
+    width: 12vw;
+    height: 12vw;
+    border: 2px groove rgba(200, 200, 200, 0.4);
+}
+
+.sphere span,
+.sphere:before,
+.sphere:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 1px dotted rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
+    animation: orbit1 infinite 3s linear;
+}
+
+.sphere:before {
+    animation: orbit2 infinite 3s linear 400ms;
+}
+
+.sphere:after {
+    animation: orbit3 infinite 3s linear 800ms;
+}
+
+.orbit1 {
+    animation: orbit1 infinite 3s linear;
+}
+
+.orbit2 {
+    width: 16vw;
+    height: 16vw;
+    animation: orbit2 infinite 3s linear 400ms;
+}
+
+.orbit3 {
+    width: 15vw;
+    height: 15vw;
+    animation: orbit3 infinite 3s linear 800ms;
+}

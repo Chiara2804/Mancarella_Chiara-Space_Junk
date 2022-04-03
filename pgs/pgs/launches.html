@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+
+
+    <!--STYLE-->
+    <link rel="stylesheet" href="../style/general/style-header.css">
+    <link rel="stylesheet" href="../style/general/style-globe.css">
+    <link rel="stylesheet" href="../style/launches/style-launches.css">
+    <link rel="stylesheet" href="../style/general/style-contextMenu.css">
+
+    <!--TAB ICON-->
+    <link rel="icon" href="../../imgs/General/icons8-earth-64.png">
+
+    <!--LIBRARIES-->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.91/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.91/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+
+    <title>Launches</title>
+</head>
+
+<body>
+    <!--CONTEXT MENU-->
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li id="back" onclick="history.back()">Indietro</li>
+            <li id="reload" onclick="reload()">Ricarica</li>
+        </ul>
+    </div>
+
+    <!--HEADER-->
+    <div class="header">
+        <div class="buttonBack">
+            <a href="index1.html"><img class="arrow" src="../../imgs/General/icons8-freccia-lunga-a-sinistra-50.png" /></a>
+        </div>
+
+        <img id="login" class="astro" onclick="open_or_close_form()" src="../../imgs/General/icons8-astronaut-helmet-60.png" title="Click to share with me your opinion">
+
+        <div class="login-box" id="form">
+            <h2>Feedback</h2><br>
+            <form action="https://formspree.io/f/xqkndgrk" method="POST" id="f">
+                <div class="user-box">
+                    <input type="email" name="email" required>
+                    <label>E-mail</label>
+                </div>
+                <div class="user-box">
+                    <label>Message</label><br><br>
+                    <textarea name="message" required></textarea>
+                </div>
+                <button class="a" type="submit">SUBMIT</button>
+            </form>
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <div id="KSC" class="pop">
+        <h1>KENNEDY SPACE CENTER</h1><br>The John F. Kennedy Space Center is NASA's spacecraft launch facility and is located in Cape Canaveral on Merritt Island in Florida, USA. Cape Canaveral was called, from 1963 to 1973, Cape Kennedy, name with which
+        It is indicated in the history of the Apollo Program, or the space program that led to the landing of the first men on the Moon.
+    </div>
+    <div id="JSC" class="pop">
+        <h1>JIUQUAN SPACE CENTER</h1>It was established in 1958, the first of China's four space ports. It is also known as Base 10. The Dongfeng site also includes flight facilities PLAAF trial, a space museum and a martyrs cemetery. JSLC is usually used
+        to launch vehicles into low and medium orbits with large orbital tilt angles, as well as to test medium and long range missiles.
+    </div>
+    <div id="VAFB" class="pop">
+        <h1>VANDENBERG AIR FORCE BASE</h1>
+        It is used for the test of short and medium range missiles for the launch of artificial satellites on polar orbits. The base, being military, is reserved for all launches covered by secrecy.
+        <br> The base was also used during the early development stages of SpaceX's Falcon 1 launcher and for the launches of the Falcon 9 and Falcon Heavy.
+    </div>
+    <div id="TSC" class="pop">
+        <h1>TAIYUAN SPACE CENTER</h1>The site is mainly used for the launch of meteorological satellites, terrestrial research satellites and scientific satellites with some Long March vectors in geosynchronous orbits. The Taiyuan Cosmodrome is also a major
+        ICBM launch center and submarine-launched ballistic missile testing center.</div>
+    <div id="XSC" class="pop">
+        <h1>XICHANG SPACE CENTER</h1>The main use concerns the launch of GTO satellites (in geostationary transfer orbit), but it is also possible to launch satellites on sun-synchronous orbit, in low earth orbit or even in moon orbit.</div>
+    <div id="WSC" class="pop">
+        <h1>WENCHANG SPACE CENTER</h1>Used for suborbital flights, on 25 June 2016 it was used for the first time for an orbital launch. It will be used for future human missions, for the Chinese space station and for deep space missions. </div>
+    <div id="EAFB" class="pop">
+        <h1>EDWARDS AIR FORCE BASE</h1>This airbase is a great site for aeronautical/aerospace research and test flights on experimental aircraft models. The base is a training center for test pilots and is home to the well-known NASA Dryden Research Center,
+        where many high-tech military and aerospace aircraft have been developed and tested. it was also a space shuttle landing site. </div>
+    <div id="WI" class="pop">
+        <h1>WALLOPS ISLAND</h1>In the 1970s, research activities on the island changed and the center was assigned to NASA and renamed Wallops Flight Center. In 1981 the island became part of NASA's Goddard Space Flight Center and the center changed its name
+        to Wallops Flight Facility.</div>
+    <div id="K" class="pop">
+        <h1>KOUROU</h1>Kourou is best known for hosting the launch base of French and European carriers (Center spatial guyanais, CSG). Since 2011 (21 October 2011), the Russian carrier Soyuz made its debut in Kourou with the launch of the first two satellites
+        of the Galileo constellation.</div>
+    <div id="A" class="pop">
+        <h1>ALCANTARA</h1>The first launch occurred on February 21, 1990. In 2003 contracts were signed to launch Ukrainian Tsyklon-4 and Israeli Shavit rockets; In addition there are further plans to launch the Russian Proton rocket. <br>The company Virgin
+        Orbit, was selected to fly their LauncherOne rocket from Alcântara in the first half of 2022.</div>
+    <div id="H" class="pop">
+        <h1>HAMMAGUIR</h1>The locality became known after the Second World War, in 1948, the Armée de terre and the Armée de l'air chose a site near it to install launch pads for military missiles and rockets for launching artificial satellites. From Hammaguir
+        the first French satellite, Asterix with the Diamant launcher, was launched in 1965. </div>
+    <div id="TAB" class="pop">
+        <h1>TORREJON AIR BASE</h1> The US airbase of Torrejon was opened for civilian purposes and the airport known as Madrid-Torrejón airport, due to its proximity to the city of Madrid. In 2013 closed to civil flights, it became an air base of the Spanish
+        Air Force.
+    </div>
+    <div id="LBSC" class="pop">
+        <h1>LUIGI BROGLIO SPACE CENTER</h1> Is an important Italian space center outside the national territory, owned by the Sapienza University of Rome and managed by the Italian Space Agency. Currently it provides for the tracking of numerous satellites
+        of various agencies. The center is made up of two segments: the terrestrial segment, represented by the data collection center, and the marine segment, consisting of ocean launch platforms. </div>
+    <div id="GS" class="pop">
+        <h1>GAGARIN'S START</h1>The pad was used to launch the world's first artificial satellite. The pad was used to launch Moon program spacecraft, Mars probe program spacecraft, Venera program spacecraft, many Cosmos satellites and others. </div>
+    <div id="TTSC" class="pop">
+        <h1>TANEGASHIMA SPACE CENTER</h1>Is the largest rocket-launch complex in Japan. The activities that take place at TNSC include assembly, testing, launching, and tracking satellites, as well as rocket engine firing tests.</div>
+    <div id="KLC" class="pop">
+        <h1>KODIAC LAUNCH COMPLEX</h1> It is a dual-use commercial and military spaceport for sub-orbital and orbital launch vehicles. The facility is owned and operated by the Alaska Aerospace Corporation, a public corporation of the State of Alaska, and
+        is located on Kodiak Island in Alaska.
+    </div>
+    <div id="ASC" class="pop">
+        <h1>ARNHEM SPACE CENTER</h1>DEAL invested in Equatorial Launch Australia to support the development of one of Australia’s first commercial space launch facilities. The Arnhem Space Centre is located just 12 degrees from the equator, allowing launch
+        vehicles to leverage the earth’s rotation to gain extra velocity.
+    </div>
+
+    <div id="cesiumContainer"></div>
+
+
+    <!--SCRIPT-->
+    <script src="../script/script-launches/script-globe.js"></script>
+    <script src="../script/General/script-login.js"></script>
+    <script src="../script/General/script-contextMenu.js"></script>
+    <script src="../script/General/script-sendEmail.js"></script>
+</body>
+
+</html>

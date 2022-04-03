@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+
+
+    <!--STYLE-->
+    <link rel="stylesheet" href="../style/ISSConnection/style-ISSConnection.css">
+    <link rel="stylesheet" href="../style/general/style-header.css">
+    <link rel="stylesheet" href="../style/general/style-contextMenu.css">
+    <link rel="stylesheet" href="../style/general/style-scrollbars.css">
+
+    <!--TAB ICON-->
+    <link rel="icon" href="../../imgs/General/icons8-earth-64.png">
+
+    <title>ISS Connection</title>
+</head>
+
+<body>
+    <!--tCONTEXT MENU-->
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li id="back" onclick="history.back()">Indietro</li>
+            <li id="reload" onclick="reload()">Ricarica</li>
+        </ul>
+    </div>
+
+
+    <!--HEADER-->
+    <div class="header">
+        <div class="buttonBack">
+            <a href="index1.html"><img class="arrow" src="../../imgs/General/icons8-freccia-lunga-a-sinistra-50.png" /></a>
+        </div>
+
+        <img id="login" class="astro" onclick="open_or_close_form()" src="../../imgs/General/icons8-astronaut-helmet-60.png" title="Click to share with me your opinion">
+
+        <div class="login-box" id="form">
+            <h2>Feedback</h2><br>
+            <form action="https://formspree.io/f/xqkndgrk" method="POST" id="f">
+                <div class="user-box">
+                    <input type="email" name="email" required>
+                    <label>E-mail</label>
+                </div>
+                <div class="user-box">
+                    <label>Message</label><br><br>
+                    <textarea name="message" required></textarea>
+                </div>
+                <button class="a" type="submit">SUBMIT</button>
+            </form>
+            <div id="status"></div>
+        </div>
+    </div>
+
+
+    <div id="box-flex">
+        <iframe src="https://www.youtube.com/embed/86YLFOog4GM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="ISSMap.html" frameborder="0"></iframe>
+    </div>
+
+    <!--SCRIPT-->
+    <script src="../script/script-ISSConnection.js/script-ISSCurrentPosition.js"></script>
+    <script src="../script/General/script-login.js"></script>
+    <script src="../script/General/script-contextMenu.js"></script>
+    <script src="../script/General/script-sendEmail.js"></script>
+</body>
+
+</html>

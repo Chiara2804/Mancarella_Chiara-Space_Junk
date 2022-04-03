@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIMON</title>
+
+    <!--GOOGLE FONT API-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+
+    <!--STYLE-->
+    <link rel="stylesheet" href="../style/general/style-scrollbars.css">
+    <link rel="stylesheet" href="../style/general/style-text.css">
+    <link rel="stylesheet" href="../style/general/style-header.css">
+    <link rel="stylesheet" href="../style/AIInSpace/style-map.css">
+    <link rel="stylesheet" href="../style/general/style-contextMenu.css">
+
+    <!--TAB ICON-->
+    <link rel="icon" href="../../imgs/General/icons8-earth-64.png">
+
+    <title>CIMON</title>
+</head>
+
+<body>
+    <!--custom context menu-->
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li id="back" onclick="history.back()">Indietro</li>
+            <li id="reload" onclick="reload()">Ricarica</li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <!--button to go to the main page-->
+        <div id="top" class="buttonBack">
+            <a href="AIInSpace.html"><img class="arrow" src="../../imgs/General/icons8-freccia-lunga-a-sinistra-50.png" /></a>
+        </div>
+
+        <!--form to send me an e-mail-->
+        <img id="login" class="astro" onclick="open_or_close_form()" src="../../imgs/General/icons8-astronaut-helmet-60.png" title="Click to share with me your opinion">
+
+        <div class="login-box" id="form">
+            <h2>Feedback</h2><br>
+            <form action="https://formspree.io/f/xqkndgrk" method="POST" id="f">
+                <div class="user-box">
+                    <input type="email" name="email" required>
+                    <label>E-mail</label>
+                </div>
+                <div class="user-box">
+                    <label>Message</label><br><br>
+                    <textarea name="message" required></textarea>
+                </div>
+                <button class="a" type="submit">SUBMIT</button>
+            </form>
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <div id="box-flex-AI">
+
+        <!--Interactive map-->
+        <div class="image">
+            <div class="title" data-text="Personal assistants in space">
+                Personal assistants in space
+            </div>
+            <div class="img1" id="img-id" target="_new">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill-opacity="1">
+                    <a href="https://en.wikipedia.org/wiki/Digital_camera" target="_new">
+                      <circle cx="23vw" cy="5.8vw" r="1vw" fill-opacity="0"/>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Microphone" target="_new">
+                        <circle cx="25.5vw" cy="5.6vw" r="0.3vw" fill-opacity="0"/>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Display#:~:text=Display%20device%2C%20output%20device%20for,for%20visual%20or%20tactile%20reception" target="_new">
+                        <rect width="16.5vw" height="12vw" x="17.5vw" y="8.4vw" fill-opacity="0"/>
+                    </a>
+                    <a href="https://www.solidswiki.com/index.php?title=Ultrasonic_Sensors#:~:text=Ultrasonic%20sensors%20generate%20high%20frequency,the%20distance%20to%20an%20object" target="_new">
+                        <circle cx="23.2vw" cy="22.5vw" r="0.7vw" fill-opacity="0"/>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Fan_(machine)" target="_new">
+                        <ellipse cx="15.2vw" cy="6.5vw" rx="1vw" ry="1.5vw" fill-opacity="0"/>                    
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Fan_(machine)" target="_new">
+                        <ellipse cx="15.8vw" cy="21.5vw" rx="1vw" ry="1.5vw" fill-opacity="0"/>                    
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Fan_(machine)" target="_new">
+                        <ellipse cx="35.5vw" cy="6.5vw" rx="1vw" ry="1.5vw" fill-opacity="0"/>                    
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Fan_(machine)" target="_new">
+                        <ellipse cx="35vw" cy="20.5vw" rx="0.5vw" ry="1vw" fill-opacity="0"/>                    
+                    </a>
+                </svg>
+            </div>
+        </div>
+        <div class="paragraph">Movie buffs will remember the Interstellar movie in which robot assistants Tars and Case assisted Joseph Cooper (Matthew McCauneghey) and his team of researchers tasked with finding life on other planets. It's interesting Note that IBM, in collaboration
+            with the German space agency DLR and Airbus, has created Crew Interactive Mobile Companion, or CIMON for short.
+            <br> CIMON is a spherical AI robot capable of conversing with astronauts at the International Space Station.There are many ways such technology can be useful.
+            <br> When astronauts set out on a long - duration mission, they encounter communication delays that prevent the control center of the mission to provide immediate support in the event of an emergency and in the daily activities related to
+            the mission. CIMON will help eliminate these problems by acting as a personal assistant by finding all the information for the astronauts faster. For example, suppose an astronaut is working on a project at the ISS and has a question about
+            the project. That would mean they have to stop what they are doing, float to a laptop, find the information and then return to the place where they were carrying out the experiment. CIMON eliminates all this work by finding this information
+            for astronauts.
+            <br> In addition to being able to understand human language, CIMON is also equipped with facial recognition technology that allows for more personal interaction. This technology requires human data annotators to insert key points along the
+            images of the training dataset so that the system can recognize all the characteristics of human faces.
+            <br> In addition, CIMON uses twelve internal fans to move, this allows it to rotate freely in all directions.This is done through LiDAR technology that allows the robot to understand the surrounding environment.</div>
+    </div>
+
+    <!--SCRIPT-->
+    <script src="../script/General/script-login.js"></script>
+    <script src="../script/General/script-contextMenu.js"></script>
+    <script src="../script/General/script-sendEmail.js"></script>
+</body>
+
+</html>

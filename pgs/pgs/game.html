@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--togliere alert e mettere un pop up, pulsante play e pausa-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--API GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Shade&family=Dosis&family=Luxurious+Roman&family=Neonderthaw&family=Oswald:wght@300&family=Source+Sans+Pro:wght@300&family=The+Nautigal&family=Yanone+Kaffeesatz:wght@500&display=swap"
+        rel="stylesheet">
+
+    <!--RIFERIMENTO AI FOGLI DI STILE-->
+    <link rel="stylesheet" href="../style/general/style-scrollbars.css">
+    <link rel="stylesheet" href="../style/general/style-header.css">
+    <link rel="stylesheet" href="../style/general/style-contextMenu.css">
+    <link rel="stylesheet" href="../style/game/style-game.css">
+    <link rel="stylesheet" href="../style/game/style-rules.css">
+
+    <!--TAB ICON-->
+    <link rel="icon" href="../../imgs/General/icons8-earth-64.png">
+
+    <title>Destroy the debris</title>
+</head>
+
+<body>
+    <!--CUSTOM CONTEXT MENU-->
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li id="back" onclick="history.back()">Indietro</li>
+            <li id="reload" onclick="reload()">Ricarica</li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <!--BUTTON TO GO TO MAIN PAGE-->
+        <div class="buttonBack">
+            <a href="mappingSpaceDebris.html"><img class="arrow" src="../../imgs/General/icons8-freccia-lunga-a-sinistra-50.png" /></a>
+        </div>
+
+        <div class="ti">Destroy the debris</div>
+
+        <!--FORM TO SEND E-MAIL-->
+        <img id="login" class="astro" onclick="open_or_close_form()" src="../../imgs/General/icons8-astronaut-helmet-60.png" title="Click to share with me your opinion">
+        <div class="login-box" id="form">
+            <h2>Feedback</h2><br>
+            <form action="https://formspree.io/f/xqkndgrk" method="POST" id="f">
+                <div class="user-box">
+                    <input type="email" name="email" required>
+                    <label>E-mail</label>
+                </div>
+                <div class="user-box">
+                    <label>Message</label><br><br>
+                    <textarea name="message" required></textarea>
+                </div>
+                <button class="a" type="submit">SUBMIT</button>
+            </form>
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <!--RULES-->
+    <div id="rules" class="rules-box">
+        <div class="rule">
+            <img src="../../imgs/game/icons8-destra-30.png">
+            <div>Right</div>
+        </div>
+        <div class="rule">
+            <img src="../../imgs/game/icons8-sinistra-30.png">
+            <div>Left</div>
+        </div>
+        <div class="rule">
+            <img src="../../imgs/game/icons8-q-minuscola-26.png">
+            <div>Shot</div>
+        </div>
+    </div>
+
+    <!--POINTS-->
+    <div id="points">0</div>
+
+    <!--INFO IMG-->
+    <img class="rules" src="../../imgs/game/icons8-informazioni-24.png">
+
+    <!--GAME-->
+    <div class="game-box">
+        <div id="board">
+            <div class="rocks"></div>
+            <div id="rocket"></div>
+        </div>
+    </div>
+
+    <!--SCRIPT-->
+    <script src="../script/General/script-login.js"></script>
+    <script src="../script/General/script-contextMenu.js"></script>
+    <script src="../script/script-game/app.js"></script>
+    <script src="../script/script-game/script-closeRules.js"></script>
+    <script src="../script/General/script-sendEmail.js"></script>
+</body>
+
+</html>

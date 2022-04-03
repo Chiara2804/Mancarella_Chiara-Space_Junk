@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.pop {
+    margin: 4vw;
+    width: 10vw;
+    height: 15.5vw;
+    display: inline;
+    background-color: rgb(170, 170, 170);
+    color: aliceblue;
+    opacity: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1vw;
+    position: absolute;
+    z-index: 999999;
+    border-radius: 20px;
+    padding: 1vw;
+    text-align: justify;
+}
+
+.pop h1 {
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 5px
+}

@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2vw;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#map-div {
+    width: 75vw;
+    height: 70vh;
+    box-shadow: 7px -2px 8px -1px rgba(0, 0, 0, 0.7);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+#details {
+    background-color: #2B32B2;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 75vw;
+    box-shadow: 7px -2px 8px -1px rgba(0, 0, 0, 0.7);
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+#details div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+span {
+    font-size: 1rem;
+    margin-top: 10px;
+}

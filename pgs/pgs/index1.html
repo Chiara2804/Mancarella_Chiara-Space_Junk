@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--GOOGLE FONT API-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+
+    <!--STYLE-->
+    <link rel="stylesheet" href="../style/general/style-scrollbars.css">
+    <link rel="stylesheet" href="../style/index/style-bg360.css">
+    <link rel="stylesheet" href="../style/general/style-header.css">
+    <link rel="stylesheet" href="../style/general/style-contextMenu.css">
+    <link rel="stylesheet" href="../style/introAnimation/style-introAnimation.css">
+
+    <!--LIBRARIES-->
+    <script src="../script/libs/a-frame/a-frame-0.7.0.js"></script>
+
+    <!--TAB ICON-->
+    <link rel="icon" href="../../imgs/General/icons8-earth-64.png">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <!--real loading animation-->
+    <div id="container" class="container">
+        <div class="sphere"><span></span></div>
+        <div class="orbit orbit1"></div>
+        <div class="orbit orbit2"></div>
+        <div class="orbit orbit3"></div>
+    </div>
+
+    <!--360 background-->
+    <div id="background" class="background">
+        <a-scene id="vr">
+            <!--https://cdn.eso.org/images/screen/eso1519c.jpg-->
+            <a-sky src="../../imgs/index/background.jpg">
+                <a-animation attribute="rotation" fill="forwards" easing="linear" dur="100000" from="0 270 0" to="0 620 0" repeat="indefinite"></a-animation>
+            </a-sky>
+
+            <a-camera position="0 1 1" id="camera">
+                <!--cursor-->
+                <a-entity cursor="fuse: false" position="0 0 -1" geometry="primitive:ring; radiusInner: 0.01; radiusOuter: 0.015" material="transparent: true; opacity: 0.8; shader: flat"></a-entity>
+            </a-camera>
+
+            <a-assets>
+                <img id="bg" src="../../imgs/index/blue.png">
+            </a-assets>
+
+
+            <a-text font="kelsonsans" position="-3.5 0.5 -4" rotation="0 15 0">
+                <a-link href="AIInSpace.html" title="AI IN SPACE" image="#bg" material="opacity: 0"></a-link>
+            </a-text>
+
+            <!--mapping space debris page-->
+            <a-text font="kelsonsans" position="3.5 0.5 -4" rotation="0 -15 0">
+                <a-link href="mappingSpaceDebris.html" title="MAPPING SPACE DEBRIS LIVE" image="#bg"></a-link>
+            </a-text>
+
+            <!--ISS connection page-->
+            <a-text font="kelsonsans" position="-3.5 4 -4" rotation="0 15 0">
+                <a-link title="ISS LIVE" href="ISSConnection.html" image="#bg"></a-link>
+            </a-text>
+
+            <!--rocket launches page-->
+            <a-text font="kelsonsans" position="3.5 4 -4" rotation="0 -15 0">
+                <a-link title="LAUNCHES COMPLEXES" href="launches.html" image="#bg"></a-link>
+            </a-text>
+
+
+            <!--music button-->
+            <a-assets>
+                <audio id="sound_f" src="../../sound/Sound.mp3" preload="auto"></audio>
+            </a-assets>
+            <a-entity sound_vr text="color:#0000ff; align:center; width:3.5; value: HIT\n
+            (it is recommended\nto use a pair of headphones)" geometry="primitive: plane; width: 2.2; height:0.8" position="0 2 -4" material="transparent: true; opacity: 0.5">
+            </a-entity>
+
+        </a-scene>
+    </div>
+
+    <!--custom context menu-->
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li id="back" onclick="history.back()">Indietro</li>
+            <li id="reload" onclick="reload()">Ricarica</li>
+        </ul>
+    </div>
+
+
+    <!--SCRIPT-->
+    <script src="../script/script-index/script-playSound.js"></script>
+    <script src="../script/General/script-contextMenu.js"></script>
+    <script src="../script/script-index/script-loading.js"></script>
+</body>
+
+</html>

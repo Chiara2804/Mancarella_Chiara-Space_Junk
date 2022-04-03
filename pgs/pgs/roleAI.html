@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The role of AI in the development of satellites and spacecraft</title>
+
+    <!--GOOGLE FONT API-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+
+    <!--STYLE-->
+    <link rel="stylesheet" href="../style/general/style-scrollbars.css">
+    <link rel="stylesheet" href="../style/general/style-text.css">
+    <link rel="stylesheet" href="../style/general/style-header.css">
+    <link rel="stylesheet" href="../style/AIInSpace/style-map.css">
+    <link rel="stylesheet" href="../style/general/style-contextMenu.css">
+
+    <!--TAB ICON-->
+    <link rel="icon" href="../../imgs/General/icons8-earth-64.png">
+
+    <title>The role of AI in the development of satellites and spacecraft</title>
+</head>
+
+<body>
+
+    <!--custom context menu-->
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li id="back" onclick="history.back()">Indietro</li>
+            <li id="reload" onclick="reload()">Ricarica</li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <!--button to go to the main page-->
+        <div id="top" class="buttonBack">
+            <a href="AIInSpace.html"><img class="arrow" src="../../imgs/General/icons8-freccia-lunga-a-sinistra-50.png" /></a>
+        </div>
+
+        <!--form to send me an e-mail-->
+        <img id="login" class="astro" onclick="open_or_close_form()" src="../../imgs/General/icons8-astronaut-helmet-60.png" title="Click to share with me your opinion">
+
+        <div class="login-box" id="form">
+            <h2>Feedback</h2><br>
+            <form action="https://formspree.io/f/xqkndgrk" method="POST" id="f">
+                <div class="user-box">
+                    <input type="email" name="email" required>
+                    <label>E-mail</label>
+                </div>
+                <div class="user-box">
+                    <label>Message</label><br><br>
+                    <textarea name="message" required></textarea>
+                </div>
+                <button class="a" type="submit">SUBMIT</button>
+            </form>
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <div id="box-flex-AI">
+        <div class="image">
+            <div class="title" data-text="The role of AI in the development of satellites and spacecraft">
+                The role of AI in the development of satellites and spacecraft
+            </div>
+            <div class="img3"></div>
+        </div>
+        <div id="paragraph" class="paragraph">Satellites and spaceships are incredibly difficult to manufacture. The manufacturing process involves many repetitive operations that require high accuracy. In addition, most of them should be done in rooms isolated to avoid the potential contamination
+            of the elements of the future apparatus by microscopic life forms. <br>According to NASA, many of them successfully survive in clean rooms, feeding on detergents and even in the space. Biological pollution of the Moon, Mars and other cosmic
+            bodies can distort research data on alien life. That is why, recently, when assembling spacecraft, companies began to use systems based on artificial intelligence algorithms to minimize contact with people. In addition to eliminating the likelihood
+            of biological contamination, the use of artificial intelligence can greatly accelerate i production processes. In addition, Artificial Intelligence systems regularly evaluate the performance of operations, the results of which help optimize
+            many processes. Eliminating the human factor is equally important to increase productivity in production. Collaborative robots or "cobots" used on assembly lines perform the longest and most error-prone operations.
+        </div>
+    </div>
+
+
+    <!--SCRIPT-->
+    <script src="../script/General/script-login.js"></script>
+    <script src="../script/General/script-contextMenu.js"></script>
+    <script src="../script/General/script-sendEmail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+html {
+    background-color: black;
+}
+
+.button-game {
+    box-shadow: inset;
+    border-radius: 3px;
+    border: 1px solid rgb(211, 211, 211);
+    cursor: default;
+    background-color: #b1b6ff3d;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: rgb(211, 211, 211);
+    font-size: 1.7vw;
+    width: 5vw;
+    height: 3vw;
+    margin: 0 0 20px 0;
+}
+
+.button-game:hover {
+    cursor: pointer;
+    background-color: #a1a1a186;
+}
+
+.button-game:active {
+    position: relative;
+    top: 1px;
+}

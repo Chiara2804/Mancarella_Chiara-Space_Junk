@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--API GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+
+    <!--STYLE-->
+    <link rel="stylesheet" href="../style/general/style-scrollbars.css">
+    <link rel="stylesheet" href="../style/general/style-globe.css">
+    <link rel="stylesheet" href="../style/general/style-text.css">
+    <link rel="stylesheet" href="../style/general/style-header.css">
+    <link rel="stylesheet" href="../style/general/style-contextMenu.css">
+    <link rel="stylesheet" href="../style/mappingSpaceDebris/style-gameButton.css">
+
+    <!--TAB ICON-->
+    <link rel="icon" href="../../imgs/General/icons8-earth-64.png">
+
+    <!--LIBRARIES-->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.79.1/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.79.1/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src="../script/libs/satellite/satellite.js"></script>
+    <script src="../script/libs/jQuery/jq-3.3.1.js" type="text/javascript"></script>
+
+    <title>Mapping Space Debris in Real Time</title>
+</head>
+
+<body>
+
+    <!--CONTEXT MENU-->
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li id="back" onclick="history.back()">Indietro</li>
+            <li id="reload" onclick="reload()">Ricarica</li>
+        </ul>
+    </div>
+
+
+    <div class="header">
+        <div class="buttonBack">
+            <a href="index1.html"><img class="arrow" src="../../imgs/General/icons8-freccia-lunga-a-sinistra-50.png" /></a>
+        </div>
+
+        <!--Login per mandarmi una mail-->
+        <img id="login" class="astro" onclick="open_or_close_form()" src="../../imgs/General/icons8-astronaut-helmet-60.png" title="Click to share with me your opinion">
+
+        <div class="login-box" id="form">
+            <h2>Feedback</h2><br>
+            <form action="https://formspree.io/f/xqkndgrk" method="POST" id="f">
+                <div class="user-box">
+                    <input type="email" name="email" required>
+                    <label>E-mail</label>
+                </div>
+                <div class="user-box">
+                    <label>Message</label><br><br>
+                    <textarea name="message" required></textarea>
+                </div>
+                <button class="a" type="submit">SUBMIT</button>
+            </form>
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <div id="box-flex" class="parallaxDeb">
+        <p class="poetry">"The Universe is infinite<br> But space has its limits<br> Rockets a launching<br> Sat’lites are orbiting<br> Explosions in Space<br> Oh what a waste<br> Fragments go flying<br> And we go crying “Space junk we’ve got” Man-made or not<br> Then
+            comes Kessler Who knows the better<br> When things collide<br> Their debris do multiply<br> Thanks to partnering<br> And NASA’s gathering<br> We look for ways<br> To manage the spray"<br><br> - S. Thuy Nguyen-Onstott.
+        </p>
+        <div class="deb">You may be wondering, “What is Orbital Debris?”<br>Although we don't see space junk in the sky, beyond the clouds and farther than the eye can see, it enters Low Earth Orbit (LEO). LEO is a junk store space orbital. There are millions of pieces
+            of space junk flying into LEO.<br>Most orbital debris includes man-made objects, such as pieces of spaceships, tiny bits of paint, rocket parts or satellites that no longer work. Most of the "space junk" moves very fast and can reach a speed
+            of 28968.2 km/h.<br>Due to the speed and volume of debris in LEO, services, explorations and current and future space operations pose a security risk to people and property in space and on Earth. There are many reasons why LEO developed into
+            an orbital cemetery. LEO is now considered the largest garbage dump in the world and it is expensive to remove space debris from LEO because the space garbage problem is huge --- there are nearly 6,000 tons of materials in low earth orbit.
+            <br>The program NASA Orbital Debris officially began in 1979 in the Space Sciences Branch of the Johnson Space Center (JSC) in Houston, Texas. The program looks for ways to create less orbital debris and designs equipment to track and remove
+            debris already in space. Space junk is not the responsibility of a single country, but the responsibility of every country that travels to space.<br>The problem of managing space debris is both an international and an opportunity to preserve
+            the space environment for future space exploration missions. We have created a global problem that can only be solved with the help of other countries. </div>
+
+
+        <button class="button-game" onclick="game_connection()">Play</button>
+    </div>
+
+    <div id="cesiumContainer"></div>
+
+
+    <!--SCRIPT-->
+    <script src="../script/General/script-login.js"></script>
+    <script src="../script/General/script-contextMenu.js"></script>
+    <script src="../script/script-mappingSpaceDebris/script-gameConnection.js"></script>
+    <script src="../script/script-mappingSpaceDebris/script-globe.js"></script>
+    <script src="../script/General/script-sendEmail.js"></script>
+</body>
+
+</html>

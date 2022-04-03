@@ -1,0 +1,19 @@
+.scroll-down {
+    margin: 0 0 4vw 0;
+    animation: mover 1s infinite alternate;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-0.5vw);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .scroll-down {
+        width: 30px;
+    }
+}
