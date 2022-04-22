@@ -13,7 +13,7 @@ let zoomLevel = 8;
 
 // define icon image
 const icon = L.icon({
-    iconUrl: '../../imgs/ISSMap/ISS.png',
+    iconUrl: '../../../imgs/ISSMap/ISS.png',
     iconSize: [45, 23],
     iconAnchor: [25, 94],
     popupAnchor: [20, -86]
