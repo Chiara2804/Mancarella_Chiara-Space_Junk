@@ -31,7 +31,7 @@ function typewriter() {
             setTimeout("typewriter()", 1500);
         } else if (iIndex == aText.length) {
             setTimeout(function() {
-                window.location.href = 'index1.html';
+                window.location.href = 'pgs/pgs/index1.html';
             }, 6000);
 
         }
